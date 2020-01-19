@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 // import { ProfileComponent } from './profile/profile.component';
 import { ProfileComponent } from './components/profile/profile.component'
 import { ProfileService } from './services/profile.service';
+import { DateContPipe } from './date-cont.pipe';
 // import { from } from 'rxjs';
 
 
@@ -15,6 +16,7 @@ import { ProfileService } from './services/profile.service';
   declarations: [
     AppComponent,
     ProfileComponent,
+    DateContPipe,
     
   ],
   imports: [
