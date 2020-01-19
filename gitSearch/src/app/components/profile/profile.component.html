@@ -15,9 +15,19 @@
         <div class="col-sm-5" ><ul class="list-group">
           <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
           <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
-          <li class="list-group-item" *ngIf="profile.blog">{{profile.bio}}</li>
-          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+          <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li> 
+          <li class="list-group-item" *ngIf="profile.email"><a href=emailto:{{profile.email}}>"{{profile.email}}</a></li>
         </ul> 
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <p>
+              <span class="label label-default">{{profile.followers}} Followers</span>   
+              <span class="label label-default">{{profile.followings}} Following</span>  
+              <span class="label label-default">{{profile.public_gists}} Public Gists</span>  
+              <span class="label label-default">{{profile.public_repos}} Public Repos</span>   
+            </p>
+          </div>
         </div>
       </div>
     </div>
