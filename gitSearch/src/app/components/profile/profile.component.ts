@@ -29,6 +29,10 @@ export class ProfileComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    this.profileService.updateProfile('Trinityrace');
+    this.profileService.getProfileInfo().subscribe(profile => this.profile = profile);
+    this.profileService.getProfileRepos().subscribe(repos =>  this.repos = repos);
   }
 
 }
