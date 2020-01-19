@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../../services/profile.service'
+import { ProfileService } from '../../services/profile.service';
 // import { from } from 'rxjs';
 
 
@@ -9,7 +9,7 @@ import { ProfileService } from '../../services/profile.service'
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profile:any[];
+  profile:any;
 
   constructor(private profileService: ProfileService) {
     this.profileService.getProfileInfo().subscribe(profile=>
