@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-@Injectable({
-  // providedIn: 'root'
-})
+@Injectable(
+  // {providedIn: 'root'}
+  )
 export class ProfileService {
 
 
@@ -14,11 +14,11 @@ export class ProfileService {
 
 
   constructor(private http:Http) { 
-    console.log()"service is ready!";
-    this.username= "Trinityrace";
+    console.log("service is ready!");
+    this.username= 'Trinityrace';
   }
   getProfileInfo(){
-    return this.http.get("https://api.github.com/users/"= this.username +"?client_id="= this.clientid +"&client_secret="+this.clientsecret)
-    .map(res.json());
+    return this.http.get ("https://api.github.com/users/"+ this.username + "?client_id="+ this.clientid +"&client_secret="+ this.clientsecret)
+    .map(res=>res.json());
   }
 }
