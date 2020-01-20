@@ -1,10 +1,11 @@
 <div class="container-fluid">
   <form action="" class="enter">
-    <div class="form-group">
-      <input onfocus="this.value=''" type="text" class="form-control" placeholder="Search git users with username"
+    <div class="form-group " id="search-box">
+      <input onfocus="this.value=''" type="text" class="search-txt" placeholder="Search username here"
         [(ngModel)]="username" name="username" (keyup)="findProfile()" />
-    </div>
-  </form>
+        <a class="search-btn" href="#"><i class="fas fa-search"></i> </a>
+    </div><br>
+  </form><br>
 
   <div *ngIf="profile">
     <br />
